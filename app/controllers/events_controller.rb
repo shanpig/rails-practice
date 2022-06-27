@@ -3,6 +3,7 @@ class EventsController < ApplicationController
 
   def index
     @events = Event.page(params[:page]).per(5)
+    Rails.logger.warn("hello")
   end
 
   def new

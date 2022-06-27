@@ -9,4 +9,5 @@ Rails.application.routes.draw do
   get "welcome/say_hello" => "welcome#say_hello"
 
   root :to => "welcome#say_hello"
+  match ':controller(/:action(/:id))', :via => :all
 end

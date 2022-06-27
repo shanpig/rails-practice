@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Demo</title>
+    <title><%= @title || 'My first ruby app' %></title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -10,6 +10,8 @@
   </head>
 
   <body>
+    <p style='color: green'><%= flash[:notice] %></p>
+    <p style='color: red'><%= flash[:alert] %></p>
     <%= yield %>
   </body>
 </html>

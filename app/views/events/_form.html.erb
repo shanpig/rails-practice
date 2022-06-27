@@ -1,0 +1,12 @@
+  <%= form_for @event, url: url do |f| %>
+  <div style="display: flex; gap: 10px; align-items: center">
+    <%= f.label :name, "Name" %>
+    <%= f.text_field :name %>
+
+    <%= f.label :description, 'description' %>
+    <%= f.text_area :description %>
+
+    <%= f.submit type %>
+  </div>
+<% end%>
+<p><%= @event.errors.full_messages[0] %></p>
